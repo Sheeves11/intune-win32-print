@@ -69,19 +69,17 @@ This is the script that does the work. I'm using a Xerox VersaLink B405 as an ex
 
 ```powershell
 #start logging
-start-transcript -Path "C:\tmp\installprinter.txt"
+start-transcript -Path "C:\tmp\install-example-printer.txt"
 
 #Stage all .inf driver files in the "\Drivers" folder
-Get-ChildItem "$PSScriptRoot\Drivers" -Recurse -Filter "*inf" | ForEach-Object { C:\Windows\sysnative\pnputil.exe /add-driver $_.FullName /install }
+Get-ChildItem "$PSScriptRoot\Drivers" -Recurse -Filter "*inf" | ForEach-Object { C:\Windows\sysnative\pnputil.exe /add-driver $_.FullName /install } 
 
 #Install the printer driver (this name is specific to each printer)
-Add-PrinterDriver -Name 'Xerox VersaLink B405 PS'
-
+Add-PrinterDriver -Name 'Canon Generic Plus UFR II'
 #Create Ports (use whatever name you want)
 Add-PrinterPort -Name 'example-printer-intune' -PrinterHostAddress 'example-printer.ddns.uark.edu'
-
 #Install Printer (use the same port as before and make up a name)
-Add-Printer -Name 'EECS Senior Design Lab Printer (intune)' -DriverName 'Xerox VersaLink B405 PS' -PortName 'example-printer-intune'
+Add-Printer -Name 'Example Printer - Intune' -DriverName 'Canon Generic Plus UFR II' -PortName 'example-printer-intune'
 
 stop-transcript
 ```
