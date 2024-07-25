@@ -1,0 +1,1 @@
+// Place your drivers in this folder, as downloaded from the manufacturer. The script will search this directory for .INF files and install them on your system.
