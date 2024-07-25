@@ -90,7 +90,7 @@ Update:
 
 Adding this line of code prevents you from needing to swap between system32 and sysnative when testing:
 
-```
+```powershell
 # Check if running in a 32-bit context and relaunch in 64-bit PowerShell if necessary
 if ($env:PROCESSOR_ARCHITEW6432 -eq "AMD64") {
     &"$env:WINDIR\Sysnative\WindowsPowerShell\v1.0\powershell.exe" -File $PSCommandPath
@@ -104,7 +104,7 @@ You can use any port name you want and you can call the printer anything you wan
 
 I just check the port name vs the one I tried installing earlier and return a 0 if found.
 
-```
+```powershell
 if ((Get-Printer).PortName -match "example-printer-intune") {
     write-output "Detected, exiting"
     exit 0
