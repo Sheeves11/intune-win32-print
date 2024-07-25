@@ -1,6 +1,8 @@
 # Intune-Win32-Print
 
-Automatically deploy printers to endpoints using Microsoft Intune Win32 apps! I wrote this code and this guide at the University of Arkansas to help solve Intune's lack of printer deployment options. Once you have a printer set up in Intune it is a breeze to deploy it to large groups of computers in just a few clicks! No print server required!
+Automatically deploy printers to endpoints using Microsoft Intune Win32 apps! I wrote this code and this guide at the University of Arkansas to help solve Intune's lack of printer deployment options. Once you have a printer set up in Intune it's a breeze to deploy it to large groups of computers in just a few clicks! No print server required! 
+
+Alongside this guide I have included an example folder structure that includes scripts and drivers for a generic Xerox printer. Deploying your own printer is a matter of changing a few variables, adding your printer's driver files, compiling the intune.win package, and uploading to Intune as a Win32 app. This app can then be assigned to groups or computers or made avalible via Company Portal self-serve!
 
 ### **Introduction:**
 
