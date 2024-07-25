@@ -136,16 +136,16 @@ From intune.microsoft.com, go to Apps -> All apps and then add a new app.
 - App naming schemes typically follow this pattern "DEPT CODE - Printer Room Number"
 - Add info as you find necessary and then upload a logo to make your Company Portal interface look nice.
 - Your install command will be `start.bat`.
-- I'm using "n/a" as the uninstall command for this example. Write an uninstall script if you wish to have that feature.
+- I'm using "n/a" as the uninstall command for this example. You could write an uninstall script if you wish to have that feature.
 - Make sure to install using system context.
 - You do not need any return code except 0.
-- Don't worry about minimum specs. It's a printer.
+- Don't worry about minimum specs.
 - Select "Use a custom detection script" and then specify your `detection.ps1` script.
 - Don't run as a 32-bit process and don't enforce script signature checks.
 - You likely have no software dependencies or supersedence specifications.
-- **Important:** Set your scope tags. Make sure "AllAdmins" is not checked unless you want to annoy every other tech at the university with your printer app.
+- **Important:** Set your scope tags. Anyone within your scope will be able to see and install this printer via Company Portal, so be careful here.
 
-Next you'll see the group deployment screen. I like to at minimum add our Tech group under the "Available for enrolled devices" section. This lets me test the script on computers I log into before deploying to others.
+Next you'll see the group deployment screen. I like to at minimum add our IT Tech group under the "Available for enrolled devices" section. This lets me test the script on computers I log into before deploying to others.
 
 Finally you'll get a sanity check page and be allowed to start your upload.
 
