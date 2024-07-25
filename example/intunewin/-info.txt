@@ -1,0 +1,1 @@
+// this is a blank folder that intunewinapputil.exe will use to create your intune.win file, which is the package that you will upload to intune.
